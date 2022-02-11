@@ -154,3 +154,10 @@ type(of: temp2)
 let rangeValue = NSRange(location: 0, length: 3)
 let rangeValueObject = NSValue(range: rangeValue)
 let tempRange = rangeValueObject.rangeValue
+
+//문자열의 범위를 지정할때, NSRange를 사용함.
+var myNSString3 : NSString = NSString(string : "swift programming")
+let subStr = myNSString3.substring(with: rangeValue) //rangeValue는 [0,3)이므로, swi 값으로 초기화됨
+
+
+//Swift의 any타입도 모든 data type을 담을 수 있다. NSValue와의 차이는 any는 데이터 타입이지만, NSValue는 클래스라는 점이다.
