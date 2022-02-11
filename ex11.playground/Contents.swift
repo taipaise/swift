@@ -130,3 +130,27 @@ for str in arrayStr2{
     print(str)
 }
 
+//문자열을 숫자로 바꿀때
+let myNumber : String = "123"
+let number : Int? = Int(myNumber) //문자열을 숫자로 바꿀때 바꿀 수 없는 경우 nil값이므로 옵셔널 변수를 사용한다.
+print(number!)
+//정수를 실수로 변환
+let myFloat : Float? = Float(number!)// 이 경우 Number가 옵셔널이기 때문에, 즉 실제 값이 아니기 때문에 언래핑을 통해 실제 값 123을 가져와 실수로 변환한다.
+
+//래핑클래스(Wrapping Class)
+
+//NSNumber : 모든 숫자 데이터형을 담을 수 있는 클래스. (Int, Float, Double, Bool)
+var number2 : Int = 10
+var myNumber2 = NSNumber(value: number2)
+//용도에 따라서 다음과 같이 활용할 수 있다.
+//1. number2를 정수형으로 사용하고 싶을 경우
+var temp1 = myNumber2.intValue
+type(of:temp1)
+//2. number2를 실수형으로 사용하고 싶을 경우
+var temp2 = myNumber2.floatValue
+type(of: temp2)
+
+//NSValue : 숫자 데이터, 객체 등 모든 데이터 형을 래핑할 수 있다. (기본 자료형 + 클래스, 구조체, 열거형)
+let rangeValue = NSRange(location: 0, length: 3)
+let rangeValueObject = NSValue(range: rangeValue)
+let tempRange = rangeValueObject.rangeValue
