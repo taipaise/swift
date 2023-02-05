@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var weightTextField: UITextField!
     
+    var bmiManager = BMICalculatorManager()
+    
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,31 +47,23 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     // MARK: - calculateButtonTapped
     @IBAction func calculateButtonTapped(_ sender: Any) {
-        print("버튼이 눌렸음")
         let resultVC = storyboard?.instantiateViewController(withIdentifier: "ResultVC") as! ResultViewController
-        guard let height = heightTextfield.text else{
-            return
-        }
-        guard let weight = weightTextField.text else{
-            return
-        }
         resultVC.modalPresentationStyle = .fullScreen
-        resultVC.bmi = calculateBMI(height: Float(height)!, weight: Float(weight)!)
+        prepareNextVC(resultVC: resultVC)
         present(resultVC, animated: true) {
             print("다음화면으로 이동")
             self.heightTextfield.text = ""
             self.weightTextField.text = ""
         }
-        
+    }
+    
+    func prepareNextVC(resultVC : ResultViewController){
+        bmiManager.calculateBMI(height: heightTextfield.text!, weight: weightTextField.text!)
+        resultVC.bmi = bmiManager.getBmi()
     }
     
     // MARK: - bmi 계산 함수
-    func calculateBMI(height:Float, weight: Float) ->Float{
-        let meter = Float(height)/100
-        let bmi = weight / (meter * meter)
-        return bmi
-    }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
                     //textField.resignFirstResponder() 로 대체 가능

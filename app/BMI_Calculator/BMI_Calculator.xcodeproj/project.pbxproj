@@ -17,6 +17,8 @@
 		31AE8AB829891064007218CB /* BMI_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8AB729891064007218CB /* BMI_CalculatorUITests.swift */; };
 		31AE8ABA29891064007218CB /* BMI_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8AB929891064007218CB /* BMI_CalculatorUITestsLaunchTests.swift */; };
 		31AE8AC729891635007218CB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE8AC629891635007218CB /* ResultViewController.swift */; };
+		31E00FEB298FD4AA002F65BD /* BMICalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E00FE9298FD4AA002F65BD /* BMICalculatorManager.swift */; };
+		31E00FEC298FD4AA002F65BD /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E00FEA298FD4AA002F65BD /* BMI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		31AE8AB729891064007218CB /* BMI_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorUITests.swift; sourceTree = "<group>"; };
 		31AE8AB929891064007218CB /* BMI_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		31AE8AC629891635007218CB /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		31E00FE9298FD4AA002F65BD /* BMICalculatorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMICalculatorManager.swift; path = ../../../../../../Desktop/BMICalculatorManager.swift; sourceTree = "<group>"; };
+		31E00FEA298FD4AA002F65BD /* BMI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMI.swift; path = ../../../../../../Desktop/BMI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +105,12 @@
 		31AE8A9529891063007218CB /* BMI_Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				31E00FE8298FD494002F65BD /* Controllers */,
+				31E00FE7298FD48E002F65BD /* Views */,
+				31E00FE6298FD489002F65BD /* Models */,
 				31AE8A9629891063007218CB /* AppDelegate.swift */,
 				31AE8A9829891063007218CB /* SceneDelegate.swift */,
-				31AE8A9A29891063007218CB /* ViewController.swift */,
-				31AE8AC629891635007218CB /* ResultViewController.swift */,
-				31AE8A9C29891063007218CB /* Main.storyboard */,
 				31AE8A9F29891064007218CB /* Assets.xcassets */,
-				31AE8AA129891064007218CB /* LaunchScreen.storyboard */,
 				31AE8AA429891064007218CB /* Info.plist */,
 			);
 			path = BMI_Calculator;
@@ -128,6 +131,33 @@
 				31AE8AB929891064007218CB /* BMI_CalculatorUITestsLaunchTests.swift */,
 			);
 			path = BMI_CalculatorUITests;
+			sourceTree = "<group>";
+		};
+		31E00FE6298FD489002F65BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31E00FEA298FD4AA002F65BD /* BMI.swift */,
+				31E00FE9298FD4AA002F65BD /* BMICalculatorManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31E00FE7298FD48E002F65BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				31AE8A9C29891063007218CB /* Main.storyboard */,
+				31AE8AA129891064007218CB /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31E00FE8298FD494002F65BD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				31AE8A9A29891063007218CB /* ViewController.swift */,
+				31AE8AC629891635007218CB /* ResultViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +294,8 @@
 				31AE8A9B29891063007218CB /* ViewController.swift in Sources */,
 				31AE8A9729891063007218CB /* AppDelegate.swift in Sources */,
 				31AE8A9929891063007218CB /* SceneDelegate.swift in Sources */,
+				31E00FEB298FD4AA002F65BD /* BMICalculatorManager.swift in Sources */,
+				31E00FEC298FD4AA002F65BD /* BMI.swift in Sources */,
 				31AE8AC729891635007218CB /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
