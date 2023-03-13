@@ -22,7 +22,6 @@ class ThirdViewController: UIViewController {
 
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        dismiss(animated: true)
     }
     
 }

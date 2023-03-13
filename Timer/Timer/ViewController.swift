@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     
     func configureUI(){
         timerLabel.text = "초를 선택하세요."
-        view.backgroundColor = .white
         timerSlider.setValue(0.5, animated: false)
         number = 30
     }
@@ -49,15 +48,15 @@ class ViewController: UIViewController {
                 number = 0
                 timerLabel.text = "완료"
                 stopTimer()
-                view.backgroundColor = .systemPink
-                AudioServicesPlayAlertSound(SystemSoundID(1322))
+                while(timerFlag){
+                    AudioServicesPlayAlertSound(SystemSoundID(1322))
+                }
             }
             
         }
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton){
-        print("restet")
         configureUI()
         stopTimer()
         timerFlag = false
