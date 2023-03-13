@@ -25,4 +25,13 @@ class DataManager {
     func getLangData() -> [Lang] {
         return langArray
     }
+    
+    func updateLangData() {
+        let dummy =  Lang(langImg: UIImage(named: "htmlLogo"), langName: "html", langDescription: "프로그래밍 언어는 아니지만 마크업 언어")
+        print("추가전 배열 길이")
+        print(langArray.count)
+        langArray.append(dummy)
+        print("추가후 배열 길이")
+        print(langArray.count)
+    }
 }

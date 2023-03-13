@@ -13,6 +13,7 @@ class ViewController: UIViewController{
     var langDataManager = DataManager()
     var langArray : [Lang] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad() 
         tableView.dataSource = self
@@ -20,10 +21,16 @@ class ViewController: UIViewController{
         tableView.rowHeight = 120
         langDataManager.makeLangData()
         langArray = langDataManager.getLangData()
-        //tableView.register(<#T##nib: UINib?##UINib?#>, forCellReuseIdentifier: <#T##String#>)
-        //tableView.register(<#T##aClass: AnyClass?##AnyClass?#>, forHeaderFooterViewReuseIdentifier: <#T##String#>)
-        // Do any additional setup after loading the view.
+        title = "lang list"
     }
+    
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+        langDataManager.updateLangData()
+        langArray = langDataManager.getLangData()
+        print("tapped")
+        tableView.reloadData()
+    }
+    
 }
 
 extension ViewController : UITableViewDataSource{
